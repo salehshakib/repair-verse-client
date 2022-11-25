@@ -19,7 +19,7 @@ const Reviews = () => {
             <ReviewItem></ReviewItem>
           </div>
           <div className="w-full flex justify-end">
-            <button className="btn border-none bg-[#1e3a8a] hover:bg-[#152863] md lg:btn-lg flex items-center justify-end">
+            <button className="btn border-none bg-[#1e3a8a] hover:bg-[#152863] flex items-center justify-end">
               See more
               <svg
                 xmlns="http://www.w3.org/2000/svg"

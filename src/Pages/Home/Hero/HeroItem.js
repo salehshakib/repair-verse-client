@@ -26,7 +26,7 @@ const HeroItem = ({ slide }) => {
         </div>
         <div className="absolute flex justify-start transform -translate-y-1/2 md:left-32 left-12 top-1/2 md:w-2/5 w-5/6">
           <p className="text-white md:text-xl text-base pt-10 md:pt-0">
-            We offer the best home services for you.
+          One-stop solution for your services. Order any service, anytime. We offer the best home services for you.
           </p>
         </div>
         <div className="absolute flex justify-start transform -translate-y-1/2 md:left-32 left-12 top-3/4 w-2/5">

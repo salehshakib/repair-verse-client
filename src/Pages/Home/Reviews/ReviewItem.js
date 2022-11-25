@@ -28,12 +28,12 @@ const ReviewItem = () => {
         >
           Accessibility tools for designers and developers
         </a>
-        <p class="mt-2 text-gray-600 dark:text-gray-300 card_preview-text">
+        {/* <p class="mt-2 text-gray-600 dark:text-gray-300 card_preview-text">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
           expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos
           enim reprehenderit nisi, accusamus delectus nihil quis facere in modi
           ratione libero!
-        </p>
+        </p> */}
       </div>
 
       <div class="flex items-center justify-end mt-4 text-base">
