@@ -6,7 +6,7 @@ const Reviews = () => {
       <section className="text-5xl py-20 max-w-screen-xl mx-auto">
         <div className="w-5/6 mx-auto">
           <p className="text-3xl font-semibold text-gray-800 capitalize xl:text-5xl lg:text-4xl dark:text-white">
-            What our reviewers say about us
+            customer reviews
           </p>
           <div className="flex mx-auto mt-6">
             <span className="inline-block w-40 h-1 bg-[#2564eb] rounded-full"></span>
