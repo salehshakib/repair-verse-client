@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ServiceItem from "./ServiceItem";
 
 const OurServices = () => {
@@ -20,14 +21,26 @@ const OurServices = () => {
             <ServiceItem></ServiceItem>
           </div>
           <div className="w-full flex justify-end">
-            <button className="btn border-none bg-[#1e3a8a] hover:bg-[#152863] flex items-center justify-end">See more
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ml-3">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-
-            </button>
+            <Link to="/services" className="">
+              <button className="btn border-none bg-[#1e3a8a] hover:bg-[#152863] flex items-center justify-end">
+                See more
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 ml-3"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </button>
+            </Link>
           </div>
-
         </div>
       </section>
     </div>

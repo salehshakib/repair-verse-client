@@ -1,9 +1,14 @@
 import Main from "../Layout/Main/Main";
+
 import Home from "../Pages/Home/Home/Home";
-// import Login from "../Pages/";
-// // import Orders from "../../Pages/Orders/Orders";
-// import SignUp from "../../Pages/SignUp/SignUp";
-// // import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import AddService from "../Pages/AddService/AddService";
+import Services from "../Pages/Services/Services";
+import LogIn from "../Pages/LogIn/LogIn/LogIn";
+import Register from "../Pages/LogIn/Register/Register";
+import MyReviews from "../Pages/MyReviews/MyReviews/MyReviews";
+import Blog from "../Pages/Blog/Blog.js";
+
+import Error from "../Pages/Error/Error";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -16,15 +21,52 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
+      {
+        path: "/addservice",
+        element: <AddService></AddService>,
+      },
+      {
+        path: "/services",
+        element: <Services></Services>,
+      },
+
       // {
-      //   path: "/login",
-      //   element: <Login></Login>,
+      //   path: "/services/:id",
+      //   element: <ServiceDetails></ServiceDetails>,
+      //   loader: ({ params }) =>
+      //     fetch(
+      //       `https://bridal-makeover-server.vercel.app/services/${params.id}`
+      //     ),
       // },
+      {
+        path: "/login",
+        element: <LogIn></LogIn>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/myreviews",
+        element: <MyReviews></MyReviews>,
+      },
       // {
-      //   path: "/signup",
-      //   element: <SignUp></SignUp>,
+      //   path: "/reviewUpdate/:id",
+      //   element: <MyReviewUpdate></MyReviewUpdate>,
+      //   loader: ({ params }) =>
+      //     fetch(
+      //       `https://bridal-makeover-server.vercel.app/reviewUpdate/${params.id}`
+      //     ),
       // },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
+      },
     ],
+  },
+  {
+    path: "*",
+    element: <Error></Error>,
   },
 ]);
 

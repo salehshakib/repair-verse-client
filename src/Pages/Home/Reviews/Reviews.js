@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ReviewItem from "./ReviewItem";
 const Reviews = () => {
   return (
@@ -18,9 +19,10 @@ const Reviews = () => {
             <ReviewItem></ReviewItem>
             <ReviewItem></ReviewItem>
           </div>
-          <div className="w-full flex justify-end">
+          {/* <div className="w-full flex justify-end">
+            
             <button className="btn border-none bg-[#1e3a8a] hover:bg-[#152863] flex items-center justify-end">
-              See more
+              Add a Review
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -36,7 +38,7 @@ const Reviews = () => {
                 />
               </svg>
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

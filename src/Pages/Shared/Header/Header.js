@@ -3,38 +3,37 @@ import { Link } from "react-router-dom";
 import logo from "../../../assets/images/icons/letter-r.png";
 
 const Header = () => {
-
   const [toggle, setToggle] = useState(true);
 
   const toggleBtn = () => {
     setToggle(!toggle);
-  }
+  };
   const user = {
     // uid: "user",
   };
 
-  const subMenu = (
-    <ul className="p-2 bg-white z-10 border-black border">
-      <li className="hover:bg-[#1e3a8a] hover:text-white rounded">
-        <Link>Submenu 1</Link>
-      </li>
-      <li className="hover:bg-[#1e3a8a] hover:text-white rounded">
-        <Link>Submenu 1</Link>
-      </li>
-      <li className="hover:bg-[#1e3a8a] hover:text-white rounded">
-        <Link>Submenu 1</Link>
-      </li>
-      <li className="hover:bg-[#1e3a8a] hover:text-white rounded">
-        <Link>Submenu 1</Link>
-      </li>
-      <li className="hover:bg-[#1e3a8a] hover:text-white rounded">
-        <Link>Submenu 1</Link>
-      </li>
-      <li className="hover:bg-[#1e3a8a] hover:text-white rounded">
-        <Link>Submenu 1</Link>
-      </li>
-    </ul>
-  );
+  // const subMenu = (
+  //   <ul className="p-2 bg-white z-10 border-black border">
+  //     <li className="hover:bg-[#1e3a8a] hover:text-white rounded">
+  //       <Link>Submenu 1</Link>
+  //     </li>
+  //     <li className="hover:bg-[#1e3a8a] hover:text-white rounded">
+  //       <Link>Submenu 1</Link>
+  //     </li>
+  //     <li className="hover:bg-[#1e3a8a] hover:text-white rounded">
+  //       <Link>Submenu 1</Link>
+  //     </li>
+  //     <li className="hover:bg-[#1e3a8a] hover:text-white rounded">
+  //       <Link>Submenu 1</Link>
+  //     </li>
+  //     <li className="hover:bg-[#1e3a8a] hover:text-white rounded">
+  //       <Link>Submenu 1</Link>
+  //     </li>
+  //     <li className="hover:bg-[#1e3a8a] hover:text-white rounded">
+  //       <Link>Submenu 1</Link>
+  //     </li>
+  //   </ul>
+  // );
 
   //   const menuItems = <></>;
 
@@ -70,7 +69,7 @@ const Header = () => {
                     className="px-2 hover:text-white hover:bg-[#1e3a8a] font-medium p-2"
                   >
                     Services
-                    <svg
+                    {/* <svg
                       className="fill-current"
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -78,9 +77,9 @@ const Header = () => {
                       viewBox="0 0 24 24"
                     >
                       <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                    </svg>
+                    </svg> */}
                   </Link>
-                  {subMenu}
+                  {/* {subMenu} */}
                 </li>
                 <li>
                   <Link
@@ -95,7 +94,7 @@ const Header = () => {
                   <>
                     <li>
                       <Link
-                        to={"/"}
+                        to="/addservice"
                         className="px-2 hover:text-white hover:bg-[#1e3a8a] font-medium p-2"
                         //   onClick={handleLogOut}
                       >
@@ -104,7 +103,7 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to={"/"}
+                        to="/myreviews"
                         className="px-2 hover:text-white hover:bg-[#1e3a8a] font-medium p-2"
                         //   onClick={handleLogOut}
                       >
@@ -204,11 +203,11 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  to=""
+                  to="/services"
                   className="px-2 hover:text-white hover:bg-[#1e3a8a] font-medium p-2"
                 >
                   Services
-                  <svg
+                  {/* <svg
                     className="fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -216,13 +215,13 @@ const Header = () => {
                     viewBox="0 0 24 24"
                   >
                     <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                  </svg>
+                  </svg> */}
                 </Link>
-                {subMenu}
+                {/* {subMenu} */}
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/addservice"
                   className="px-2 hover:text-white hover:bg-[#1e3a8a] font-medium p-2"
                 >
                   Add Service
@@ -230,7 +229,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/myreviews"
                   className="px-2 hover:text-white hover:bg-[#1e3a8a] font-medium p-2"
                 >
                   My Reviews
@@ -238,7 +237,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/blog"
                   className="px-2 hover:text-white hover:bg-[#1e3a8a] font-medium p-2"
                 >
                   Blog
