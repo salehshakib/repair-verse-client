@@ -9,6 +9,7 @@ import MyReviews from "../Pages/MyReviews/MyReviews/MyReviews";
 import Blog from "../Pages/Blog/Blog.js";
 
 import Error from "../Pages/Error/Error";
+import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails/ServiceDetails";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/services",
         element: <Services></Services>,
+      },
+      {
+        path: "/details",
+        element: <ServiceDetails></ServiceDetails>,
       },
 
       // {

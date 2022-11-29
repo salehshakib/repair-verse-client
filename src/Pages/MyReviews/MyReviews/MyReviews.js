@@ -1,7 +1,6 @@
 import React from "react";
 import MyReviewCard from "./MyReviewCard";
 
-
 const MyReviews = () => {
   return (
     <div className="bg-base-200 pt-20">

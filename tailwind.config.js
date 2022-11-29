@@ -5,7 +5,14 @@ module.exports = {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        layout: "3fr 2fr",
+        mobile_layout: "1fr",
+      },
+    },
+    //#1e3a8a
+    //#152863
   },
   plugins: [
     require("daisyui"),
