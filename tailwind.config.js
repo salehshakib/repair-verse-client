@@ -13,6 +13,7 @@ module.exports = {
     },
     //#1e3a8a
     //#152863
+    //#07b4d5
   },
   plugins: [
     require("daisyui"),

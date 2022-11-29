@@ -69,17 +69,9 @@ const Header = () => {
                     className="px-2 hover:text-white hover:bg-[#1e3a8a] font-medium p-2"
                   >
                     Services
-                    {/* <svg
-                      className="fill-current"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                    </svg> */}
+                    
                   </Link>
-                  {/* {subMenu} */}
+                  
                 </li>
                 <li>
                   <Link
@@ -96,7 +88,7 @@ const Header = () => {
                       <Link
                         to="/addservice"
                         className="px-2 hover:text-white hover:bg-[#1e3a8a] font-medium p-2"
-                        //   onClick={handleLogOut}
+                    
                       >
                         Add Service
                       </Link>

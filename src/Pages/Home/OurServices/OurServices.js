@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ServiceItem from "./ServiceItem";
 
 const OurServices = () => {
+  const [services, setServices] = useState([]);
+
+  //fetch services
+  useEffect(() => {
+    fetch("https://repair-verse.vercel.app/services")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
+
   return (
     <div className="bg-base-200">
       <section className="text-5xl py-20 max-w-screen-xl mx-auto">
@@ -16,9 +25,10 @@ const OurServices = () => {
             <span className="inline-block w-1 h-1 bg-[#07b4d5] rounded-full"></span>
           </div>
           <div className="grid gap-5 grid-cols-1 md:grid-cols-3 my-10">
-            <ServiceItem></ServiceItem>
-            <ServiceItem></ServiceItem>
-            <ServiceItem></ServiceItem>
+            {services.slice(-3).map((service) => (
+              <ServiceItem key={service._id} service={service}></ServiceItem>
+            ))}
+            
           </div>
           <div className="w-full flex justify-end">
             <Link to="/services" className="">

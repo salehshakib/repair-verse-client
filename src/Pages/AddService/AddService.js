@@ -1,10 +1,46 @@
 import React from "react";
+import toast from "react-hot-toast";
+import PageTitle from "../Shared/Header/PageTitle/PageTitle";
 
 const AddService = () => {
+  const handleServiceAdd = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const serviceName = form.serviceName.value;
+    const servicePrice = form.servicePrice.value;
+    const serviceURL = form.serviceURL.value;
+    const serviceDetails = form.serviceDetails.value;
+
+    const services = {
+      serviceName: serviceName,
+      servicePrice: servicePrice,
+      serviceURL: serviceURL,
+      serviceDetails: serviceDetails,
+    };
+
+    fetch("https://repair-verse.vercel.app/services", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(services),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          toast.success("Service Added Successfully!");
+          form.reset();
+        }
+      })
+      .catch((error) => console.error(error));
+  };
+
   return (
     <div className="bg-gradient-to-r from-[#2564eb]  to-[#07b4d5] min-h-[90vh] pt-20 ">
       <section className="text-5xl py-20 max-w-screen-xl mx-auto">
         <div className="w-5/6 mx-auto">
+          <PageTitle title={"Add Service"}></PageTitle>
           <p className="text-3xl font-semibold text-white capitalize xl:text-5xl lg:text-4xl dark:text-white">
             Add a new Service
           </p>
@@ -13,14 +49,8 @@ const AddService = () => {
             <span className="inline-block w-3 h-1 mx-1 bg-base-300 rounded-full"></span>
             <span className="inline-block w-1 h-1 bg-base-300 rounded-full"></span>
           </div>
-          {/* <div className="grid gap-5 grid-cols-1 md:grid-cols-3 my-10">
-            <ServiceItem></ServiceItem>
-            <ServiceItem></ServiceItem>
-            <ServiceItem></ServiceItem>
-          </div> */}
           <div className="mt-10">
-            {/* <form onSubmit={handleServiceAdd}> */}
-            <form>
+            <form onSubmit={handleServiceAdd}>
               <div className="flex lg:flex-row flex-col lg:justify-between">
                 <div className="mb-6 lg:w-1/2 w-full pr-3">
                   <label

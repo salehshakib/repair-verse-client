@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { Link } from "react-router-dom";
 
-const MyReviewCard = () => {
+const MyReviewCard = ({ myReview, handleDelete }) => {
+
   return (
     <div class="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
       <div class="flex items-center justify-between">
@@ -43,8 +45,8 @@ const MyReviewCard = () => {
           </a>
         </div>
         <div class="flex items-center justify-end gap-3">
-          <div className="tooltip" data-tip="Edit">
-            <button className="">
+          <Link to={`/reviewUpdate/${myReview._id}`} className="tooltip" data-tip="Edit">
+            <button className="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -60,10 +62,10 @@ const MyReviewCard = () => {
                 />
               </svg>
             </button>
-          </div>
+          </Link>
 
-          <div className="tooltip" data-tip="Delete">
-            <button className="">
+          <Link className="tooltip" data-tip="Delete">
+            <button className="cursor-pointer" onClick={() => handleDelete(myReview._id)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -79,7 +81,7 @@ const MyReviewCard = () => {
                 />
               </svg>
             </button>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

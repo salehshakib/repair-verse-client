@@ -46,7 +46,7 @@ const ServiceDetailsSection = () => {
                 </PhotoView>
               </PhotoProvider> */}
             </div>
-            <div className="border-2 lg:mx-5 bg-[#f7e9f3] shadow-lg rounded-2xl">
+            <div className="border-2 lg:mx-5 bg-white shadow-lg rounded-2xl">
               <div className="flex flex-col justify-start py-10 px-5">
                 <h2 className="lg:text-6xl text-3xl font-pacific text-[#1e3a8a] pb-7">
                   {/* {services.serviceName} */}hello
